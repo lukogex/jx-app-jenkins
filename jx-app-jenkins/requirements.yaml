@@ -2,7 +2,7 @@
 dependencies:
 - name: "jenkins"
   repository: "https://kubernetes-charts.storage.googleapis.com"
-  version: "0.32.9"
+  version: "1.9.5"
 - name: "exposecontroller"
   repository: "http://chartmuseum.jenkins-x.io"
   version: "2.3.95"
