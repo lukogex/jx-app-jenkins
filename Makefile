@@ -1,4 +1,4 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
+CHART_REPO := http://chartmuseum.devinfra.xxxlgroup.com 
 CURRENT=$(pwd)
 NAME := jx-app-jenkins
 OS := $(shell uname)
@@ -30,6 +30,10 @@ clean:
 	rm -rf charts
 	rm -rf ${NAME}*.tgz
 	rm -rf requirements.lock
+
+publish:
+	helm package ${NAME}
+	helm push ${NAME} devinfra
 
 release: clean build
 ifeq ($(OS),Darwin)

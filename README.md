@@ -4,6 +4,12 @@ This App is for running any kind of Jenkins server inside Jenkins X.
 
 This App is intended to be used with the `--ng` kind of Jenkins X cluster so that traditional Jenkins X build packs will default to using tekton pipelines and then any traditional `Jenkinsfile` based pipelines will be delegated to this Jenkins App.
 
+## Release
+
+Custom flow for Lutz devinfra JenkinsX:
+- Adapt version in Chart.yaml
+- `make clean build upload`
+
 ## Installing 
 
 The Jenkins App can be installed by running:

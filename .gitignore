@@ -14,3 +14,8 @@
 .idea
 
 .updatebot-repos
+
+*.tgz
+
+jx-app-jenkins/charts
+jx-app-jenkins/requirements.lock

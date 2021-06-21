@@ -2,7 +2,9 @@ CHART_REPO := http://jenkins-x-chartmuseum:8080
 CURRENT=$(pwd)
 NAME := jx-app-jenkins
 OS := $(shell uname)
-VERSION := $(shell cat ./VERSION)
+# VERSION := $(shell cat ./VERSION)
+VERSION=$1
+
 
 init:
 	helm init --client-only
@@ -25,6 +27,7 @@ delete:
 	helm delete --purge ${NAME}
 
 clean:
+	echo $VERSION
 	rm -rf charts
 	rm -rf ${NAME}*.tgz
 	rm -rf requirements.lock
